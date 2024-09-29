@@ -1,26 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Header from './components/Header';
+import Breadcrumb from './components/Breadcrumb';
+import ProductImage from './components/ProductImage';
+import ProductInfo from './components/ProductInfo';
+import SizeSelector from './components/SizeSelector';
+import AddToCart from './components/AddToCart';
+import ProductDetails from './components/ProductDetails';
+import Materials from './components/Materials';
+import ShippingAndReturns from './components/ShippingAndReturns';
+import YouMayAlsoLike from './components/YouMayAlsoLike';
+import FeaturedCollections from './components/FeaturedCollections';
+import Footer from './components/Footer';
+import PaymentTypes from './components/PaymentTypes';
 
-function App() {
+const AppContainer = styled.div`
+  font-family: 'Satoshi', sans-serif;
+  max-width: 390px;
+  margin: 0 auto;
+`;
+
+const App: React.FC = () => {
+  const handleAddToCart = () => {
+    // add to cart logic
+    console.log('Product added to cart');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Header />
+      <Breadcrumb home="Home" products="Products" category="Thea Tank Top" />
+      <ProductImage />
+      <ProductInfo />
+      <SizeSelector />
+      <AddToCart onClick={handleAddToCart} />
+      <ProductDetails />
+      <Materials />
+      <ShippingAndReturns />
+      <YouMayAlsoLike />
+      <FeaturedCollections />
+      <Footer />
+      <PaymentTypes />
+
+    </AppContainer>
   );
-}
+};
 
 export default App;
