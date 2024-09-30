@@ -63,8 +63,8 @@ const SliderLinePart = styled.div<{ active: boolean }>`
 `;
 
 const collections = [
-  { id: 1, name: 'Getaway Collection', image: '/assets/Mobile-Banner-1.png' },
-  { id: 2, name: 'Era Collection', image: '/assets/Mobile-Banner.png' },
+  { id: 1, name: 'Getaway Collection', image: 'Mobile-Banner-1.png' },
+  { id: 2, name: 'Era Collection', image: 'Mobile-Banner.png' },
 ];
 
 const FeaturedCollections = () => {
@@ -84,7 +84,10 @@ const FeaturedCollections = () => {
         {collections.map(collection => (
           <SwiperSlide key={collection.id}>
             <CollectionCard>
-              <CollectionImage src={collection.image} alt={collection.name} />
+              <CollectionImage 
+                src={`${process.env.PUBLIC_URL}/assets/${collection.image}`} 
+                alt={collection.name} 
+              />
               <CollectionName>{collection.name}</CollectionName>
             </CollectionCard>
           </SwiperSlide>

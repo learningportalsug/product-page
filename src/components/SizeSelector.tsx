@@ -80,7 +80,10 @@ const SizeSelector: React.FC = () => {
       </Header>
       <Section>
       <ItemContainer>
-        <ItemImage src="/assets/SHOULDER_TANK_5034145.png" alt="Eirene Black Asymmetrical Top" />
+        <ItemImage 
+          src={`${process.env.PUBLIC_URL}/assets/SHOULDER_TANK_5034145.png`} 
+          alt="Eirene Black Asymmetrical Top" 
+        />
         <ItemInfo>
           <ItemName>Eirene Black Asymmetrical Top</ItemName>
           <SelectSizeWrapper>
@@ -97,7 +100,10 @@ const SizeSelector: React.FC = () => {
         </ItemInfo>
       </ItemContainer>
       <ItemContainer>
-        <ItemImage src="/assets/BELT_SKIRT_ 117.png" alt="Eirene Vegan Leather Mini Skirt" />
+        <ItemImage 
+          src={`${process.env.PUBLIC_URL}/assets/BELT_SKIRT_ 117.png`} 
+          alt="Eirene Vegan Leather Mini Skirt" 
+        />
         <ItemInfo>
           <ItemName>Eirene Vegan Leather Mini Skirt</ItemName>
           <SelectSizeWrapper>

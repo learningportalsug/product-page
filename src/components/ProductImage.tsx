@@ -50,9 +50,9 @@ const SwiperWrapper = styled(Swiper)`
 `;
 
 const productImages = [
-  '/assets/FINESSE_03testm__497.png',
-  '/assets/FINESSE_03testm__498.png',
-  '/assets/FINESSE_03testm__509.png',
+  'FINESSE_03testm__497.png',
+  'FINESSE_03testm__498.png',
+  'FINESSE_03testm__509.png',
 ];
 
 const ProductImage: React.FC = () => {
@@ -70,7 +70,10 @@ const ProductImage: React.FC = () => {
         {productImages.map((image, index) => (
           <SwiperSlide key={index}>
             <ImageWrapper>
-              <Image src={image} alt={`Product view ${index + 1}`} />
+              <Image 
+                src={`${process.env.PUBLIC_URL}/assets/${image}`} 
+                alt={`Product view ${index + 1}`} 
+              />
             </ImageWrapper>
           </SwiperSlide>
         ))}

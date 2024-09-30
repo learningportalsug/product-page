@@ -25,7 +25,7 @@ const Logo = styled.div`
   left: 60%;
   width: 100px;
   height: 30px;
-  background: url('/assets/Finesse-Logo_Black.png') no-repeat center center;
+  background: url('${process.env.PUBLIC_URL}/assets/Finesse-Logo_Black.png') no-repeat center center;
   background-size: contain;
 `;
 

@@ -67,8 +67,8 @@ const SliderLinePart = styled.div<{ active: boolean }>`
 `;
 
 const products = [
-  { id: 1, name: 'Amelie Festival Set', price: '$86.00', image: '/assets/FINESSE_03testm__591.png' },
-  { id: 2, name: 'Adrian Blue Mini', price: '$36.00', image: '/assets/FINESSE_03testm__498.png' },
+  { id: 1, name: 'Amelie Festival Set', price: '$86.00', image: 'FINESSE_03testm__591.png' },
+  { id: 2, name: 'Adrian Blue Mini', price: '$36.00', image: 'FINESSE_03testm__498.png' },
 ];
 
 const YouMayAlsoLike = () => {
@@ -88,7 +88,10 @@ const YouMayAlsoLike = () => {
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <ProductCard>
-              <ProductImage src={product.image} alt={product.name} />
+              <ProductImage 
+                src={`${process.env.PUBLIC_URL}/assets/${product.image}`} 
+                alt={product.name} 
+              />
               <ProductName>{product.name}</ProductName>
               <ProductPrice>{product.price}</ProductPrice>
             </ProductCard>

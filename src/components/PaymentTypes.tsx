@@ -18,7 +18,7 @@ const PaymentTypes = () => {
   return (
     <PaymentTypesContainer>
       <PaymentImage 
-        src="/assets/abcd.png" 
+        src={`${process.env.PUBLIC_URL}/assets/abcd.png`}
         alt="Accepted payment types: Visa, Mastercard, Shop Pay, PayPal, Apple Pay, Afterpay, Klarna"
       />
     </PaymentTypesContainer>
